@@ -488,15 +488,6 @@ ul {
 .cards-item {
   width: 450px;
   outline: 1px solid #eeeeee;
-  margin-right: 30px;
-}
-
-.cards-item:nth-child(-n + 6) {
-  margin-bottom: 30px;
-}
-
-.cards-item:nth-child(3n + 3) {
-  margin-right: 0px;
 }
 
 .cards-item:hover, .cards-item:focus {
@@ -545,6 +536,39 @@ ul {
   line-height: 28px;
   letter-spacing: 0.03em;
   color: var(--background-color);
+}
+
+@media screen and (min-width: 768px) {
+  .cards-item {
+    max-width: 354px;
+  }
+  .cards-item:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+  .cards-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .buttons-menu {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cards-item:nth-child(-n + 6) {
+    margin-bottom: 30px;
+  }
+  .cards-item:nth-child(3n + 3) {
+    margin-right: 0px;
+  }
+  .cards-item:nth-child(-n + 9) {
+    margin-right: 30px;
+  }
+  .cards-item:nth-child(3), .cards-item:nth-child(6), .cards-item:nth-child(9) {
+    margin-right: 0;
+  }
+  .cards-item:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
 }
 
 .hero {
