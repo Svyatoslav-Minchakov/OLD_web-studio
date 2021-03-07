@@ -1,6 +1,6 @@
 .portfolio-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .images-title {
@@ -25,7 +25,8 @@
 
 .buttons-menu {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: start;
   margin-bottom: 50px;
 }
 
@@ -33,6 +34,10 @@
   .buttons-menu & + & {
     margin-left: 8px;
   }
+}
+
+.buttons-item:nth-child(-n + 3) {
+  margin-bottom: 15px;
 }
 
 .portfolio-btn {
@@ -69,7 +74,7 @@
 }
 
 .cards-item {
-  width: 370px;
+  width: 450px;
   outline: 1px solid #eeeeee;
   margin-right: 30px;
 

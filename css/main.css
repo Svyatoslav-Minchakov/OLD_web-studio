@@ -416,8 +416,8 @@ ul {
 }
 
 .portfolio-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .images-title {
@@ -442,12 +442,17 @@ ul {
 
 .buttons-menu {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: start;
   margin-bottom: 50px;
 }
 
 .buttons-menu .buttons-item + .buttons-item {
   margin-left: 8px;
+}
+
+.buttons-item:nth-child(-n + 3) {
+  margin-bottom: 15px;
 }
 
 .portfolio-btn {
@@ -481,7 +486,7 @@ ul {
 }
 
 .cards-item {
-  width: 370px;
+  width: 450px;
   outline: 1px solid #eeeeee;
   margin-right: 30px;
 }
@@ -591,7 +596,7 @@ ul {
     background-color: var(--background-footer-color);
     text-align: center;
     padding-top: 118px;
-    height: 400px;
+    min-height: 600px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -853,13 +858,25 @@ ul {
 
 .customers-menu {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 480px;
+  margin: 0 auto;
+  justify-content: center;
   padding-bottom: 94px;
 }
 
 .customers-item {
-  width: 170px;
+  max-width: 210px;
+  width: 100%;
   height: 90px;
+}
+
+.customers-item:nth-child(2n + 1) {
+  margin-right: 30px;
+}
+
+.customers-item:nth-child(-n + 4) {
+  margin-bottom: 30px;
 }
 
 .customers-link {
@@ -891,6 +908,43 @@ ul {
 .regular-customers-title {
   padding-top: 94px;
   padding-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .customers-item {
+    max-width: 226px;
+    width: 100%;
+    height: 90px;
+  }
+  .customers-item:nth-child(n + 4) {
+    margin-bottom: 0;
+  }
+  .customers-item:nth-child(-n + 3) {
+    margin-bottom: 30px;
+  }
+  .customers-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .customers-item:nth-child(3) {
+    margin-right: 0;
+  }
+  .customers-menu {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .customers-menu {
+    flex-wrap: nowrap;
+    max-width: 1200px;
+  }
+  .customers-item {
+    width: 170px;
+  }
+  .customers-item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
 }
 
 .backdrop {
@@ -1175,8 +1229,8 @@ ul {
 
 .footer {
   background-color: var(--background-footer-color);
-  padding-top: 60px;
-  padding-bottom: 60px;
+  height: 603px;
+  padding: 60px 15px;
 }
 
 .address-link {
@@ -1190,8 +1244,8 @@ ul {
 }
 
 .footer-flex {
-  display: flex;
-  align-items: baseline;
+  width: 100%;
+  height: 100%;
 }
 
 .footer-text {
@@ -1205,6 +1259,7 @@ ul {
   color: var(--background-color);
   margin-top: 0;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .footer-icons-menu {
@@ -1213,13 +1268,14 @@ ul {
 }
 
 .footer-flex-element-1 {
-  width: 231px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .footer-flex-element-2 {
   width: 206px;
-  margin-left: 70px;
-  margin-right: 93px;
+  margin: 0 auto 60px auto;
 }
 
 .footer-icons-svg {
@@ -1248,10 +1304,53 @@ ul {
 
 .footers-logo {
   padding: 0;
+  margin: 0 auto;
+}
+
+.studio-white {
+  color: var(--background-color);
+}
+
+.container-logo {
+  margin-bottom: 20px;
+}
+
+.footer-form-mail {
+  width: 450px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    height: 463px;
+  }
+  .footer-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer-form {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-flex-element-1 {
+    margin-right: 70px;
+    text-align: start;
+    width: 231px;
+  }
+  .footer-flex-element-2 {
+    margin-right: 91px;
+  }
+  .footer-flex {
+    flex-wrap: nowrap;
+    align-items: baseline;
+    padding: 0 15px;
+    width: 1200px;
+  }
 }
 
 .footer-form-box {
-  display: flex;
+  text-align: center;
 }
 
 .footer-form-text {
@@ -1264,21 +1363,22 @@ ul {
   color: var(--background-color);
   margin-top: 0;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .footer-form-mail {
-  width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   border-radius: 4px;
   background: var(--background-footer-color);
   color: var(--background-color);
-  margin-right: 12px;
   padding-left: 16px;
+  margin: 0 auto 20px 0;
 }
 
 .footer-form-button {
+  display: block;
   background-image: url(../images/icon-send.svg);
   width: 200px;
   height: 50px;
@@ -1298,6 +1398,21 @@ ul {
   text-align: start;
   padding-left: 29px;
   cursor: pointer;
+  margin: 0 auto;
+}
+
+.footer-form {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form-mail {
+    width: 358px;
+  }
+  .footer-form-box {
+    display: flex;
+    max-width: 570px;
+  }
 }
 
 .section-title {
