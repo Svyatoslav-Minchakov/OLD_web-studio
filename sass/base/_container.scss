@@ -1,21 +1,15 @@
-// .container {
-//   width: 1200px;
-//   padding-left: 15px;
-//   padding-right: 15px;
-//   margin: auto;
-
-//   // .header & {
-//   //   display: flex;
-//   //   align-items: center;
-//   // }
-// }
-
 .header .container {
   width: 100%;
   padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 480px) {
@@ -27,12 +21,20 @@
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    width: 800px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+
+    .header & {
+      display: flex;
+      align-items: center;
+    }
   }
 }

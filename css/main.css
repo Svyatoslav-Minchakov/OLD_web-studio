@@ -36,6 +36,12 @@ ul {
   align-items: center;
 }
 
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
@@ -45,13 +51,20 @@ ul {
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    width: 800px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+  }
+  .header .container {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -620,7 +633,7 @@ ul {
     background-color: var(--background-footer-color);
     text-align: center;
     padding-top: 118px;
-    min-height: 600px;
+    min-height: 400px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -631,6 +644,7 @@ ul {
 .qualities-section {
   padding-top: 94px;
   padding-bottom: 94px;
+  width: 100vh;
 }
 
 .qualities-item {
@@ -752,10 +766,11 @@ ul {
   background-color: var(--background-card-color);
   padding-top: 94px;
   padding-bottom: 94px;
+  max-width: 480px;
 }
 
 .our-team-item {
-  width: 450px;
+  max-width: 450px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
@@ -769,6 +784,7 @@ ul {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  max-width: 450px;
 }
 
 .our-team-card {
