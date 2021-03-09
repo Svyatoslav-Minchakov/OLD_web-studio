@@ -28,12 +28,11 @@
   flex-wrap: wrap;
   justify-content: start;
   margin-bottom: 50px;
+  max-width: 450px;
 }
 
-.buttons-item {
-  .buttons-menu & + & {
-    margin-left: 8px;
-  }
+.buttons-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .buttons-item:nth-child(-n + 3) {
@@ -71,11 +70,16 @@
 .cards-menu {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cards-item {
   width: 450px;
   outline: 1px solid #eeeeee;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 
   &:hover,
   &:focus {
@@ -98,7 +102,8 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 294px;
+  max-height: 294px;
+  height: 100%;
 }
 
 .cards-hover-container {
@@ -143,10 +148,22 @@
 
   .buttons-menu {
     justify-content: center;
+    max-width: 100%;
+  }
+
+  .cards-menu {
+    max-width: 768px;
+    margin: 0 auto;
+    justify-content: start;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .cards-menu {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
   .cards-item {
     &:nth-child(-n + 6) {
       margin-bottom: 30px;
