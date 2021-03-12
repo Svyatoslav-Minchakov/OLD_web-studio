@@ -2,7 +2,7 @@
   background-color: var(--background-footer-color);
   text-align: center;
   padding-top: 118px;
-  height: 400px;
+  min-height: 400px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,7 +11,11 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/first-page/background-image/background-image-mobile.jpg);
+    url('../../images/first-page/background-image/background-image-mobile.jpg');
+}
+
+.hero-button {
+  border: none;
 }
 
 @media screen and (min-device-pixel-ratio: 2),
@@ -23,7 +27,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url('../images/first-page/background-image/background-image-mobile@2x.jpg');
+      url('../../images/first-page/background-image/background-image-mobile@2x.jpg');
   }
 }
 
@@ -68,6 +72,63 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/first-page/background-image/background-image-tablet.jpg);
+      url('../../images/first-page/background-image/background-image-tablet.jpg');
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../../images/first-page/background-image/background-image-tablet@2x.jpg');
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-color: var(--background-footer-color);
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    min-height: 600px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../../images/first-page/background-image/background-image-desktop.jpg');
+  }
+
+  .hero-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    max-width: 610px;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../../images/first-page/background-image/background-image-desktop@2x.jpg');
+    }
   }
 }
