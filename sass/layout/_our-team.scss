@@ -1,6 +1,6 @@
 .our-team {
   background-color: var(--background-card-color);
-  padding-top: 94px;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 
@@ -12,6 +12,10 @@
 
   & {
     margin: 0 auto 30px auto;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
   // .our-team-menu & + & {
@@ -101,11 +105,20 @@
 
   .our-team-item {
     width: 354px;
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .our-team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
   .our-team-item {
     width: 270px;
+    margin: auto;
   }
 }

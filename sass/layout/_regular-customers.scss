@@ -28,6 +28,11 @@
   width: 88px;
 }
 
+.customers {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .customers-menu {
   display: flex;
   flex-wrap: wrap;
@@ -37,7 +42,7 @@
   // background-color: aqua;
   justify-content: space-around;
   // justify-content: center;
-  padding-bottom: 94px;
+  // padding-bottom: 94px;
 }
 
 .customers-item {
@@ -116,6 +121,11 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .customers {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
   .customers-menu {
     flex-wrap: nowrap;
     max-width: 1200px;

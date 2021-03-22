@@ -1,6 +1,6 @@
 .qualities-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   width: 100%;
   margin: 0 auto;
 }
@@ -41,23 +41,18 @@
   margin-top: 0px;
 }
 
-.qualities-title {
-  text-align: start;
-}
-
 .qualities-item {
   max-width: 450px;
   width: 100%;
   margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 //   .qualities-menu &:not(:last-child) {
 //     margin-right: 30px;
 //   }
-
-//   &:not(:last-child) {
-//     margin-bottom: 30px;
-//   }
-// }
 
 @media screen and (min-width: 768px) {
   .qualities-menu {
@@ -71,6 +66,10 @@
     max-width: 354px;
   }
 
+  .qualities-title {
+    text-align: start;
+  }
+
   .qualities-menu {
     max-width: 768px;
     margin: 0 auto;
@@ -78,6 +77,11 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .qualities-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
   .qualities-item {
     width: 270px;
   }

@@ -38,6 +38,7 @@
   font-style: normal;
   font-weight: 900;
   font-size: 26px;
+  line-height: 42px;
   margin: 0px auto 30px auto;
   max-width: 500px;
 }
@@ -75,21 +76,29 @@
       url('../images/first-page/background-image/background-image-tablet.jpg');
   }
 
-
+  .hero-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
-    screen and (min-resolution: 192dpi) and (min-width: 768px),
-    screen and (min-resolution: 2dppx) and (min-width: 768px) {
-    .hero {
-      background-image: linear-gradient(
-          to right,
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url('../images/first-page/background-image/background-image-tablet@2x.jpg');
-    }
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/first-page/background-image/background-image-tablet@2x.jpg');
   }
+}
 
 @media screen and (min-width: 1200px) {
   .hero {
@@ -120,19 +129,17 @@
     text-transform: uppercase;
     max-width: 610px;
   }
-
-  
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
-    screen and (min-resolution: 192dpi) and (min-width: 1200px),
-    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
-    .hero {
-      background-image: linear-gradient(
-          to right,
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url('../images/first-page/background-image/background-image-desktop@2x.jpg');
-    }
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/first-page/background-image/background-image-desktop@2x.jpg');
   }
+}
