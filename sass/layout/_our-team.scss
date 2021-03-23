@@ -98,13 +98,20 @@
 
 @media screen and (min-width: 768px) {
   .our-team-menu {
+    max-width: 738px;
     margin-bottom: 0px;
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .our-team-item {
     width: 354px;
+    margin-right: 0;
+    margin-left: 0;
+
     &:nth-last-child(-n + 2) {
       margin-bottom: 0;
     }
@@ -115,6 +122,10 @@
   .our-team {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
+
+  .our-team-menu {
+    min-width: 1200px;
   }
 
   .our-team-item {

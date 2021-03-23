@@ -86,9 +86,30 @@
   }
 }
 
-@media screen and (max-width: 449px) {
-  .customers-item:nth-child(5) {
-    margin-bottom: 30px;
+@media screen and (min-width: 450px) and (max-width: 768px) {
+  .customers-menu {
+    max-width: 450px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .customers-menu {
+    display: block;
+  }
+
+  .customers-item {
+    margin-right: auto;
+    margin-left: auto;
+
+    &:nth-child(5) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .customers-item:nth-child(2n-1) {
+    margin-right: 30px;
   }
 }
 
@@ -116,7 +137,7 @@
   }
 
   .customers-menu {
-    max-width: 768px;
+    max-width: 738px;
   }
 }
 

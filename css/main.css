@@ -970,12 +970,18 @@ h6 {
 
 @media screen and (min-width: 768px) {
   .our-team-menu {
+    max-width: 738px;
     margin-bottom: 0px;
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
   .our-team-item {
     width: 354px;
+    margin-right: 0;
+    margin-left: 0;
   }
   .our-team-item:nth-last-child(-n + 2) {
     margin-bottom: 0;
@@ -986,6 +992,9 @@ h6 {
   .our-team {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
+  .our-team-menu {
+    min-width: 1200px;
   }
   .our-team-item {
     width: 270px;
@@ -1073,9 +1082,28 @@ h6 {
   fill: var(--hover-color);
 }
 
-@media screen and (max-width: 449px) {
+@media screen and (min-width: 450px) and (max-width: 768px) {
+  .customers-menu {
+    max-width: 450px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .customers-menu {
+    display: block;
+  }
+  .customers-item {
+    margin-right: auto;
+    margin-left: auto;
+  }
   .customers-item:nth-child(5) {
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .customers-item:nth-child(2n-1) {
+    margin-right: 30px;
   }
 }
 
@@ -1098,7 +1126,7 @@ h6 {
     margin-right: 0;
   }
   .customers-menu {
-    max-width: 768px;
+    max-width: 738px;
   }
 }
 
